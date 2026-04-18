@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BarbieNova Cosmetics</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Arial', sans-serif; }
+
+/* Glittering black background animation */
+@keyframes glitter {
+    0% {background-position:0 0;}
+    100% {background-position:1000px 1000px;}
+}
+body {
+    background-color:#000;
+    background-image: radial-gradient(circle, #FFD700 1px, transparent 1px);
+    background-size: 10px 10px;
+    animation: glitter 20s linear infinite;
+    color:#FFD700;
+}
+
+/* Header / Logo */
+header {
+    text-align:center;
+    padding:25px;
+    background-color:#000;
+    border-bottom:4px solid #FFD700;
+}
+header img { width:220px; height:auto; }
+
+/* Luxurious Brand Header */
+.brand-header {
+    text-align:center;
+    padding:50px 20px;
+}
+.brand-header h1 {
+    font-family:'Brush Script MT', cursive;
+    font-size:4em;
+    font-weight:bold;
+    color:#FFD700;
+    text-shadow:0 0 20px #FFD700, 0 0 40px #FF69B4, 0 0 60px #FFD700;
+    margin-bottom:20px;
+}
+.brand-header p {
+    font-size:1.2em;
+    color:#FFD700;
+    max-width:900px;
+    margin:0 auto;
+}
+
+/* Section Titles */
+h2 { 
+    text-align:center; 
+    color:#FFD700; 
+    margin:40px 0 20px; 
+    font-size:2.2em; 
+}
+.collection-title { text-align:center; margin-top:20px; font-size:1.5em; color:#FFD700; }
+
+/* Products & Collection Cards */
+.products, .collection-part {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+    padding:25px;
+}
+.product-card {
+    background-color:#000;
+    border:2px solid #FFD700;
+    border-radius:15px;
+    width:260px;
+    padding:20px;
+    text-align:center;
+    color:#FFD700;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.product-card:hover {
+    transform:scale(1.05);
+    box-shadow:0 0 25px #FFD700,0 0 40px #FF69B4;
+}
+.product-card img { width:100%; border-radius:10px; margin-bottom:15px; }
+.product-card h3 { color:#FF69B4; margin-bottom:10px; }
+.product-card p { font-size:0.95em; color:#FFD700; }
+
+/* Banner */
+.collection-banner {
+    text-align:center;
+    margin: 35px 0;
+}
+.collection-banner img {
+    width: 85%;
+    max-width:1000px;
+    border-radius:20px;
+    box-shadow:0 0 40px #FFD700, 0 0 50px #FF69B4;
+}
+
+/* Booking Form */
+.booking-form {
+    max-width:650px;
+    margin:50px auto;
+    padding:35px;
+    border:3px solid #FFD700;
+    border-radius:20px;
+    background-color:#000;
+    color:#FFD700;
+}
+.booking-form h2 { text-align:center; margin-bottom:25px; color:#FF69B4; }
+.booking-form input, .booking-form textarea, .booking-form button {
+    width:100%;
+    padding:14px;
+    margin-bottom:15px;
+    border-radius:10px;
+    border:1px solid #FFD700;
+    background-color:#111;
+    color:#FFD700;
+    font-size:1em;
+}
+.booking-form input::placeholder, .booking-form textarea::placeholder { color:#FF69B4; }
+.booking-form button {
+    background-color:#FF69B4;
+    color:#fff;
+    font-weight:bold;
+    cursor:pointer;
+    transition: background 0.3s;
+}
+.booking-form button:hover { background-color:#e60073; }
+
+/* Social Media */
+.social-media {
+    text-align:center;
+    margin:50px 0 30px;
+}
+.social-media a {
+    color:#FFD700;
+    font-size:2.2em;
+    margin:0 18px;
+    transition: color 0.3s, transform 0.3s;
+}
+.social-media a:hover { color:#FF69B4; transform:scale(1.2); }
+
+/* Responsive */
+@media(max-width:768px) {
+    .products, .collection-part { flex-direction:column; align-items:center; }
+}
+</style>
+</head>
+<body>
+
+<!-- Logo -->
+<header>
+    <img src="images/logo.jpg" alt="BarbieNova Logo">
+</header>
+
+<!-- Brand Header -->
+<section class="brand-header">
+    <h1>Welcome to BarbieNova</h1>
+    <p>Where luxury meets confidence. Rule your beauty with glamorous cosmetics and curated collections that shine.</p>
+</section>
+
+<!-- Single Products -->
+<h2>Our Signature Products</h2>
+<section class="products">
+    <div class="product-card"><img src="images/lipstick.jpg" alt="Nova Kiss Lipstick"><h3>Nova Kiss Lipstick</h3><p>A bold, creamy lipstick designed to make every smile unforgettable. Rich color that lasts all day.</p></div>
+    <div class="product-card"><img src="images/lipgloss.jpg" alt="Gloss & Define Duo"><h3>Gloss & Define Duo</h3><p>Lip gloss and liner pair for perfectly defined, glossy lips that shine with confidence.</p></div>
+    <div class="product-card"><img src="images/blush.jpg" alt="Glow Lock Blush Set"><h3>Glow Lock Blush Set</h3><p>Blush and setting powder that enhance your natural glow while keeping makeup flawless.</p></div>
+    <div class="product-card"><img src="images/mascara.jpg" alt="Lash Crown Mascara"><h3>Lash Crown Mascara</h3><p>Lift, lengthen, and volumize your lashes for dramatic, eye-catching beauty.</p></div>
+    <div class="product-card"><img src="images/brushes.jpg" alt="Royal Blend Brush Set"><h3>Royal Blend Brush Set</h3><p>Soft, high-quality brushes designed for smooth blending and professional application.</p></div>
+    <div class="product-card"><img src="images/beautybag.jpg" alt="BarbieNova Beauty Vault"><h3>BarbieNova Beauty Vault</h3><p>All-in-one makeup bag with scrunchies, headbands, face masks, and eye patches for ultimate beauty prep.</p></div>
+</section>
+
+<!-- Pink Eclipse Banner -->
+<section class="collection-banner">
+    <img src="images/pink-eclipse-banner.jpg" alt="Pink Eclipse Collection Banner">
+</section>
+
+<!-- Pink Eclipse Collection -->
+<h2>Pink Eclipse Collection</h2>
+<p class="collection-title">Luxury split into two exclusive sets</p>
+
+<!-- Collection Part 1 -->
+<section class="collection-part">
+    <div class="product-card"><img src="images/headbands.jpg" alt="Chic Headbands"><h3>Chic Headbands</h3><p>Elegant headbands to glam up every hairstyle with a touch of luxury.</p></div>
+    <div class="product-card"><img src="images/scrunchies.jpg" alt="Silk Scrunchies"><h3>Silk Scrunchies</h3><p>Soft and shiny scrunchies that protect your hair while staying stylish.</p></div>
+    <div class="product-card"><img src="images/hairclips.jpg" alt="Diamond Hair Clips"><h3>Diamond Hair Clips</h3><p>Beautiful hair clips that add sparkle to every look.</p></div>
+    <div class="product-card"><img src="images/eye-patches.jpg" alt="Glitter Eye Patches"><h3>Glitter Eye Patches</h3><p>Revitalizing eye patches for a refreshed and luminous under-eye area.</p></div>
+    <div class="product-card"><img src="images/face-masks.jpg" alt="Radiance Face Masks"><h3>Radiance Face Masks</h3><p>Nourishing masks for radiant, glowing skin.</p></div>
+</section>
+
+<!-- Collection Part 2 -->
+<section class="collection-part">
+    <div class="product-card"><img src="images/lipstick2.jpg" alt="Velvet Lipstick"><h3>Velvet Lipstick</h3><p>Rich, velvety lipstick that ensures glamorous, long-lasting color.</p></div>
+    <div class="product-card"><img src="images/nails.jpg" alt="Glam Press-On Nails"><h3>Glam Press-On Nails</h3><p>Easy-to-use press-on nails for a polished and sophisticated look.</p></div>
+    <div class="product-card"><img src="images/lashes.jpg" alt="Luxury Lashes"><h3>Luxury Lashes</h3><p>High-quality lashes that make your eyes pop for any occasion.</p></div>
+    <div class="product-card"><img src="images/nightwear.jpg" alt="Velvet Nightwear"><h3>Velvet Nightwear</h3><p>Soft and stylish nightwear for an elegant and comfortable night.</p></div>
+    <div class="product-card"><img src="images/lipgloss2.jpg" alt="Glossy Lip Set"><h3>Glossy Lip Set</h3><p>Gloss and shine combo to complete your glamorous night look.</p></div>
+</section>
+
+<!-- Booking Form -->
+<section class="booking-form">
+<h2>Book Your BarbieNova Experience</h2>
+<form action="mailto:mensahkorkorbarbie@gmail.com/" method="post" enctype="text/plain">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<input type="text" name="service" placeholder="Service or Product Interested In" required>
+<textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+<button type="submit">Send Booking Request</button>
+</form>
+</section>
+
+<!-- Social Media -->
+<section class="social-media">
+<a href="https://www.instagram.com/itz_barbie247" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://www.snapchat.com/add/itz_barbie247" target="_blank"><i class="fab fa-snapchat-ghost"></i></a>
+<a href="https://www.tiktok.com/@itz_barbie68" target="_blank"><i class="fab fa-tiktok"></i></a>
+</section>
+
+</body>
+</html>
